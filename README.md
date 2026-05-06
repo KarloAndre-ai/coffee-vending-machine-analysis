@@ -32,6 +32,8 @@ Does payment type affect how much people spend?
 What is the average transaction value per payment type?
     average transaction for card is 31.41 and 30.81 for cash. 
 Do card users spend more than cash users?
+    card users on everage spend a little bit more based on avg_transaction.
 Which coffees are top performers vs underperformers?
+    ![alt text](image-3.png)
 If you removed the lowest-performing coffee, how much revenue would you lose?
-(If you have time data) When is the peak time for coffee sales?
+    removing the last performing coffee would remove $211 from total. 

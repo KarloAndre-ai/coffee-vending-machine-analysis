@@ -96,3 +96,20 @@ avg_transaction = df.groupby('cash_type').agg(
 )
 print()
 print(avg_transaction)
+
+#showing a chart with max() and min() 
+max_minDF = df.groupby('coffee_name').agg(
+    transactions = ('money', 'count'),
+    top_coffee_price = ('money', 'max'),
+    lowest_coffee_price = ('money', 'min')
+)
+print()
+print(max_minDF.sort_values(by = 'transactions', ascending = False))
+
+
+#removing the lowest-performing coffee. 
+
+lowest_perf_coffee = max_minDF.loc[max_minDF['transactions'] == 1]
+lowest_perf_sum = lowest_perf_coffee['top_coffee_price'].sum()
+print(lowest_perf_coffee)
+print(lowest_perf_sum)

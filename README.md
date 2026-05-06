@@ -1,14 +1,17 @@
 QUESTIONS TO ANSWER FROM THIS DATASET:
 
+This is a project consisting of retrieving sample dataset from kaggle on 2 vending machines that sell coffee. My attempt here is to get a better understanding of the syntax of pandas and apply the dataframe functions to an actual dataset. This was good experience to sample. Not all datasets will be as friendly as this one and I'm looking forward to testing more datasets with syntax from the API reference on Pandas website. 
+
+
 What is the total revenue? 
     $122,321.58
 What is the average price per coffee? 
-    $31.380600307850177
+    $31.381
 What is the highest priced and lowest priced coffee? 
     highest priced were latte, cappuccino, hot chocolate, cocoa.
     lowest priced coffe_name is Tea.
 What is the most purchased coffee?
-     americano with milk is the most purchased
+     Americano with milk is the most purchased
 What is the least purchased coffee? 
     double ristretto, double chocolate, hot mlkshake, chocolate, vanilla coffee, coffee with chocolate, double espresso, caramel all got received 1 as the least purchased.
 How many times was each coffee sold?
@@ -37,3 +40,4 @@ Which coffees are top performers vs underperformers?
     ![alt text](image-3.png)
 If you removed the lowest-performing coffee, how much revenue would you lose?
     removing the last performing coffee would remove $211 from total. 
+

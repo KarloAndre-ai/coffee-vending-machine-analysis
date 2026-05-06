@@ -89,3 +89,10 @@ print(avg_price.sort_values(by = 'avgCost', ascending = False))
 summary = df ['cash_type'].value_counts().to_frame('count')
 summary['percent'] = summary['count'] / summary['count'].sum() * 100
 print(summary['percent'])
+
+#finding the average transaction value per payment type.
+avg_transaction = df.groupby('cash_type').agg(
+    avg_transaction_value = ('money', 'mean')
+)
+print()
+print(avg_transaction)

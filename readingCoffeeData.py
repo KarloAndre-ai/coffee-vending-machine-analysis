@@ -61,3 +61,31 @@ print(most_purchased)
 cashTypeDF = df['cash_type'].value_counts()
 print()
 print(cashTypeDF)
+
+#finding the coffee that generated the most revenue.
+sumsOfCoffee = df.groupby('coffee_name')['money'].sum().sort_values(ascending = False)
+print()
+print(sumsOfCoffee)
+
+#shows popular and most profitable 
+popAndProfit = df.groupby('coffee_name').agg(
+    no_of_purchased = ('coffee_name', 'count'),
+    revenue = ('money', 'sum')
+)
+
+print()
+print(popAndProfit.sort_values(by = 'revenue', ascending = False))
+
+#finding the average price per type
+avg_price = df.groupby('coffee_name').agg(
+    count =('coffee_name', 'count'),
+    avgCost = ('money', 'mean')
+)
+print()
+print(avg_price.sort_values(by = 'avgCost', ascending = False))
+
+
+#percentage of cards vs. cash
+summary = df ['cash_type'].value_counts().to_frame('count')
+summary['percent'] = summary['count'] / summary['count'].sum() * 100
+print(summary['percent'])
